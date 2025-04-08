@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='register.css') }}" rel="stylesheet">
+    <title>修改能源设备</title>
+</head>
+<body>
+<div class="register-container">
+    <h2>修改能源设备</h2>
+    <form action="{{ url_for('energy.editact', id=device.DeviceID) }}" method="POST">
+        <input type="text" name="deviceid" value="{{ device.DeviceID }}" required>
+        <input type="text" name="areaid" value="{{ device.AreaID }}" required>
+        <input type="text" name="energyid" value="{{ device.EnergyID }}" required>
+        <button type="submit">提交</button>
+    </form>
+</div>
+</body>
+</html>

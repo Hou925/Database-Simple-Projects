@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='register.css') }}" rel="stylesheet">
+    <title>修改用户</title>
+</head>
+<body>
+<div class="register-container">
+    <h2>修改用户</h2>
+    <form action="{{ url_for('users.edituser', user_id=user.id) }}" method="POST">
+        <input type="text" name="username" value="{{ user.username }}" required>
+        <input type="password" name="password" value="{{ user.password }}" required>
+        <input type="gender" name="gender" value="{{ user.gender }}" required>
+        <input type="age" name="age" value="{{ user.age }}" required>
+        <button type="submit">提交</button>
+    </form>
+</div>
+</body>
+</html>

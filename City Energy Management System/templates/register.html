@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/register.css" rel="stylesheet">
+    <title>注册页面</title>
+</head>
+<body>
+<div class="register-container">
+    <h2>注册</h2>
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="用户名" required>
+        <input type="password" name="password" placeholder="密码" required>
+        <input type="password" name="confirm_password" placeholder="确认密码" required>
+        <input type="gender" name="gender" placeholder="性别" required>
+        <input type="age" name="age" placeholder="年龄" required>
+        <button type="submit">注册</button>
+    </form>
+</div>
+<script>
+    {% if error_message %}
+        alert("{{ error_message }}");
+    {% endif %}
+
+    {% if exist_user_error %}
+        alert("{{ exist_user_error }}");
+    {% endif %}
+
+</script>
+</body>
+</html>

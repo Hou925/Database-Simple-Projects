@@ -1,0 +1,64 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+.forecast-results {
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #343a40;
+        }
+h10 {
+            text-align: center;
+            margin-left: 930px;
+            font-weight: 700;
+            color: #343a40;
+        }
+
+.tab {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+.tab button {
+            background-color: #f8f9fa;
+            border: none;
+            outline: none;
+            padding: 14px 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+.tab button:hover {
+            background-color: #ddd;
+        }
+.tab button.active {
+            background-color: #343a40;
+            color: white;
+        }
+.tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+.tab-content.active {
+            display: block;
+        }
+.plot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+.plot-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }

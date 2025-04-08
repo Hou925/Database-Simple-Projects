@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='register.css') }}" rel="stylesheet">
+    <title>新增设备</title>
+</head>
+<body>
+<div class="register-container">
+    <h2>新增设备</h2>
+    <form action="{{ url_for('energy.addact') }}" method="POST">
+        <input type="text" name="deviceid" placeholder="设备编号" required>
+        <input type="text" name="areaid" placeholder="设备所在区域" required>
+        <input type="text" name="energyid" placeholder="设备记录能源类型" required>
+        <button type="submit">提交</button>
+    </form>
+</div>
+</body>
+</html>

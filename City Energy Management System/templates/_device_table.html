@@ -1,0 +1,16 @@
+{% for device in devices %}
+    <tr>
+        <td>{{ device.DeviceID }}</td>
+        <td>{{ device.AreaID }}</td>
+        <td>{{ device.EnergyID }}</td>
+        <td>
+            <a href="{{ url_for('energy.addact') }}" class="btn btn-success btn-sm">新增</a>
+            <a href="{{ url_for('energy.editact', id=device.DeviceID) }}" class="btn btn-warning btn-sm">编辑</a>
+            <a href="{{ url_for('energy.deleteact', id=device.DeviceID) }}" class="btn btn-danger btn-sm">删除</a>
+        </td>
+    </tr>
+{% else %}
+    <tr>
+        <td colspan="4">没有数据</td>
+    </tr>
+{% endfor %}
